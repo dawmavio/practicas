@@ -3,6 +3,6 @@
 }
 .active{
     background-color: transparent !important;
-    border-bottom: 1px solid blue;
-    border-top: 1px solid blue;
+    border-bottom: 1px solid blue !important;
+    border-top: 1px solid blue !important;
 }

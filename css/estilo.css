@@ -1,0 +1,149 @@
+  
+   .container-grid {
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        'cabecera cabecera cabecera'
+        'menu menu menu'
+        'form form form'
+        'footer footer footer';
+    width: 80%;
+    background-color: aquamarine;
+
+}
+
+.cabecera,
+.menu,
+.form,
+.footer,
+.banner,
+.enlaces {
+    border: 1px solid black;
+    text-align: center;
+    line-height: 150px;
+    text-align: center;
+
+}
+
+.enlaces,.banner {
+    display: none;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.cabecera {
+
+    grid-area: cabecera;
+}
+
+
+
+.form {
+
+    grid-area: form;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+  @media (min-width:681px) and (max-width:1024) {
+       .container-grid {
+
+           display: grid;
+           grid-template-columns: auto auto auto;
+           grid-template-rows: 35px 1fr 100px;
+           grid-template-areas:
+               'cabecera cabecera cabecera'
+               'menu menu .'
+               'form form banner'
+               'footer footer footer';
+           width: 80%;
+           background-color: aquamarine;
+
+       }
+
+       .cabecera,
+       .menu,
+       .form,
+       .footer,
+       .banner,
+       .enlaces {
+           border: 1px solid black;
+           text-align: center;
+           line-height: 150px;
+           text-align: center;
+
+       }
+
+       .enlaces {
+           display: none;
+       }
+
+       .menu {
+           grid-area: menu;
+           grid-column: 1/3;
+
+       }
+
+       .cabecera {
+
+           grid-area: cabecera;
+       }
+
+       .banner {
+
+           grid-area: banner;
+       }
+
+       .form {
+
+           grid-area: form;
+       }
+
+       .footer {
+           grid-area: footer;
+       }
+
+
+   }
+
+
+   @media (min-width: 1025px) {
+       .enlaces,.banner{
+           display: block;
+       }
+       
+
+       .container-grid {
+
+           display: grid;
+           grid-template-columns: auto auto auto;
+           grid-template-rows: auto auto;
+           width: 80%;
+           background-color: aquamarine;
+           grid-template-areas:
+               'cabecera cabecera cabecera'
+               'menu menu menu'
+               'enlaces form banner'
+               'footer footer footer';
+
+       }
+
+       .enlaces {
+
+           grid-area: enlaces;
+       }
+
+       .menu {
+
+           grid-area: menu;
+       }
+
+
+   }
